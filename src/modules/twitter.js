@@ -1,10 +1,11 @@
-import axios from "axios";
-export const GET_TWITTER_FEED_REQUESTED = "twitter/GET_TWITTER_FEED_REQUESTED";
-export const SET_TWITTER_FEED = "twitter/SET_TWITTER_FEED";
+import axios from 'axios';
+
+export const GET_TWITTER_FEED_REQUESTED = 'twitter/GET_TWITTER_FEED_REQUESTED';
+export const SET_TWITTER_FEED = 'twitter/SET_TWITTER_FEED';
 
 const initialState = {
   twitterFeed: [],
-  isRequestingTwitterFeed: false
+  isRequestingTwitterFeed: false,
 };
 
 export default (state = initialState, { type, twitterFeed }) => {
@@ -12,14 +13,14 @@ export default (state = initialState, { type, twitterFeed }) => {
     case GET_TWITTER_FEED_REQUESTED:
       return {
         ...state,
-        isRequestingTwitterFeed: true
+        isRequestingTwitterFeed: true,
       };
 
     case SET_TWITTER_FEED:
       return {
         ...state,
         twitterFeed,
-        isRequestingTwitterFeed: !state.isRequestingTwitterFeed
+        isRequestingTwitterFeed: !state.isRequestingTwitterFeed,
       };
 
     default:
@@ -27,14 +28,12 @@ export default (state = initialState, { type, twitterFeed }) => {
   }
 };
 
-export const getTwitterFeed = e => dispatch => {
+export const getTwitterFeed = e => (dispatch) => {
   e.preventDefault();
   dispatch({
-    type: GET_TWITTER_FEED_REQUESTED
+    type: GET_TWITTER_FEED_REQUESTED,
   });
   return axios
     .get(`/api/search?q=${e.target.search.value}`)
-    .then(({ data: twitterFeed }) =>
-      dispatch({ type: SET_TWITTER_FEED, twitterFeed })
-    );
+    .then(({ data: twitterFeed }) => dispatch({ type: SET_TWITTER_FEED, twitterFeed }));
 };

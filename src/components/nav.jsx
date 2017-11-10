@@ -1,13 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "sanitize.css/sanitize.css";
-import "../styles/nav.css";
+/* eslint no-script-url: 0 */
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import 'sanitize.css/sanitize.css';
+import '../styles/nav.css';
 
 const Nav = () => (
   <section className="navigation">
     <div className="nav-container">
       <div className="brand">
-        <a href="#!">CNN</a>
+        <a href="JavaScript:;">CNN</a>
       </div>
       <nav>
         <div className="nav-mobile">

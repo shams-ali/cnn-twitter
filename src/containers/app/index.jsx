@@ -1,9 +1,9 @@
-import React from "react";
-import { Route } from "react-router-dom";
-import Home from "../home";
-import About from "../about";
-import Nav from "../../components/nav";
-import Header from "../../components/header";
+import React from 'react';
+import { Route } from 'react-router-dom';
+import Home from '../home';
+import About from '../about';
+import Nav from '../../components/nav';
+import Header from '../../components/header';
 
 const App = () => (
   <div>

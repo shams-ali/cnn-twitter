@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const TweetListItem = ({ tweet, createdAt, screenName, profileImage }) => (
+const TweetListItem = ({ tweet, screenName, profileImage }) => (
   <article className="card">
     <a href={`https://twitter.com/${screenName}`}>
       <figure className="thumbnail">
@@ -13,5 +14,11 @@ const TweetListItem = ({ tweet, createdAt, screenName, profileImage }) => (
     </a>
   </article>
 );
+
+TweetListItem.propTypes = {
+  tweet: PropTypes.string.isRequired,
+  screenName: PropTypes.string.isRequired,
+  profileImage: PropTypes.string.isRequired,
+};
 
 export default TweetListItem;
