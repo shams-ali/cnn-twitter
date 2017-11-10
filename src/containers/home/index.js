@@ -1,14 +1,14 @@
 import React from "react";
-import { push } from "react-router-redux";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { getTwitterFeed } from "../../modules/twitter";
+import TweetListItem from "../../components/tweetList";
 
 const Home = ({ twitterFeed, getTwitterFeed, isRequestingTwitterFeed }) => (
   <div>
     <h1>Home</h1>
     <p>TitterFeed: {console.log(twitterFeed)}</p>
-
+    <TweetListItem tweets={twitterFeed} />
     <p>
       <button onClick={getTwitterFeed} disabled={isRequestingTwitterFeed}>
         Get Twitter Feed
