@@ -7,7 +7,7 @@ import { getTwitterFeed } from "../../modules/twitter";
 const Home = props => (
   <div>
     <h1>Home</h1>
-    <p>Count: {props.twitterFeed.feed}</p>
+    <p>Count: {console.log(props.twitterFeed)}</p>
 
     <p>
       <button
@@ -15,12 +15,6 @@ const Home = props => (
         disabled={props.isRequestingTwitterFeed}
       >
         Get Twitter Feed
-      </button>
-    </p>
-
-    <p>
-      <button onClick={() => props.changePage()}>
-        Go to about page via redux
       </button>
     </p>
   </div>

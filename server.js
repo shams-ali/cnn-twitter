@@ -13,7 +13,7 @@ const Twitter = require("twitter");
 const Promise = require("bluebird");
 const app = express();
 
-app.use(express.static(path.join(__dirname, "build")));
+// app.use(express.static(path.join(__dirname, "build")));
 
 const twitterClient = new Twitter({
   consumer_key,
@@ -24,15 +24,15 @@ const twitterClient = new Twitter({
 
 Promise.promisifyAll(twitterClient);
 
-app.get("/search", ({ query: { q } }, res) =>
+app.get("/api/search", ({ query: { q } }, res) =>
   twitterClient
     .getAsync("search/tweets", { q, count: 10 })
     .then(data => res.send(data))
     .catch(err => res.send(err))
 );
 
-app.get("*", (req, res) =>
-  res.sendFile(path.join(__dirname, "build/index.html"))
-);
+// app.get("*", (req, res) =>
+//   res.sendFile(path.join(__dirname, "build/index.html"))
+// );
 
-app.listen(3000, err => console.log(err || `listening on ${3000}`));
+app.listen(4000, err => console.log(err || `listening on ${4000}`));
