@@ -2,6 +2,9 @@
 
 An app to help you search twitter feeds
 
+# Deployed Link
+http://174.138.62.55/
+
 ## Team
   - __Product Owner__: Shams Ali
 
@@ -32,6 +35,9 @@ CNN-Twitters got your back. CNN-Twitter will help you find the the most recent T
 - jest
 - flow
 - eslint: airbnb, prettier
+- Docker/docker-compose
+- Digital Ocean
+
 
 ## <a name="development"></a>Development
 Setting up a development environment requires global installations of `node`, `npm`, `yarn`, and `create-react-app`
