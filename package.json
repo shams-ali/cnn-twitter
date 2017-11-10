@@ -4,9 +4,12 @@
   "private": true,
   "dependencies": {
     "axios": "^0.17.0",
+    "babel-preset-flow": "^6.23.0",
     "bluebird": "^3.5.1",
     "dotenv": "^4.0.0",
+    "flow-bin": "^0.59.0",
     "history": "^4.7.2",
+    "prettier-eslint": "^8.2.1",
     "react": "^16.1.0",
     "react-dom": "^16.1.0",
     "react-redux": "^5.0.6",
@@ -26,7 +29,12 @@
     "start:dev": "nodemon server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "flow": "flow",
+    "flowStart": "flow start",
+    "flowStop": "flow stop",
+    "flowStatus": "flow status",
+    "flowCoverage": "flow coverage"
   },
   "proxy": "http://localhost:4000"
 }
