@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/about.css";
 
 const About = () => (
-  <div class="content">
+  <div className="content">
     <h1>CNN Coding Challege</h1>
     <cite>Flexbox, Responsive, SASS, React, Redux, React-Router</cite>
     <p>
