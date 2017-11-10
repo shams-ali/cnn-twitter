@@ -3,8 +3,7 @@ import { Field, reduxForm } from "redux-form";
 
 const SearchBar = ({ handleSubmit, pristine, reset, submitting }) => (
   <form onSubmit={handleSubmit}>
-    <div>
-      <label>Search</label>
+    <div className="group">
       <div>
         <Field
           name="search"

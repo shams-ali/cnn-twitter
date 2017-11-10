@@ -6,9 +6,7 @@ import TweetListItem from "../../components/tweetList";
 import SearchBar from "../../components/searchBar";
 
 const Home = ({ twitterFeed, getTwitterFeed, isRequestingTwitterFeed }) => (
-  <div>
-    <h1>Home</h1>
-    <p>TitterFeed: {console.log(twitterFeed)}</p>
+  <div className="centered">
     <SearchBar
       handleSubmit={getTwitterFeed}
       submitting={isRequestingTwitterFeed}

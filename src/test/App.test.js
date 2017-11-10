@@ -10,9 +10,7 @@ it("renders without crashing", () => {
   ReactDOM.render(
     <Provider store={store}>
       <ConnectedRouter history={history}>
-        <div>
-          <App />
-        </div>
+        <App />
       </ConnectedRouter>
     </Provider>,
     div

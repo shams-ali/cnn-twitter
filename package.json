@@ -6,9 +6,11 @@
     "axios": "^0.17.0",
     "babel-preset-flow": "^6.23.0",
     "bluebird": "^3.5.1",
+    "compass": "^0.1.1",
     "dotenv": "^4.0.0",
     "flow-bin": "^0.59.0",
     "history": "^4.7.2",
+    "icomoon-build": "^0.2.8",
     "node-sass-chokidar": "^0.0.3",
     "npm-run-all": "^4.1.2",
     "prettier-eslint": "^8.2.1",
@@ -26,10 +28,8 @@
     "twitter": "^1.7.1"
   },
   "scripts": {
-    "build-css":
-      "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch-css":
-      "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
