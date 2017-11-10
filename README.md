@@ -8,13 +8,11 @@ An app to help you search twitter feeds
 ## Table of Contents
 
 1. [How it works](#how-it-works)
-2. [App Wireframe](#wireframe)
-5. [Tech Stack](#tech-stack)
-6. [Development](#development)
-  6. [System Requirements](#system-requirements)
-  6. [Installation](#installation)
-  6. [Simulate for Mobile](#simulate-mobile)
-7. [Contributing](#contributing)
+2. [Tech Stack](#tech-stack)
+3. [Development](#development)
+    - [System Requirements](#system-requirements)
+    - [Installation](#installation)
+    - [Simulate for Mobile](#simulate-mobile)
 
 ## <a name="how-it-works"></a>How it Works
 
@@ -36,7 +34,7 @@ CNN-Twitters got your back. CNN-Twitter will help you find the the most recent T
 ## <a name="development"></a>Development
 Setting up a development environment requires global installations of `node`, `npm`, `yarn`, and `create-react-app`
 
-## <a name="installation"></a>2. Installation
+## <a name="installation"></a>Installation
 
 On the command prompt run the following commands
 
@@ -49,3 +47,5 @@ $ cd cnn-twitter/
 ```sh
 $ yarn run start:prod
 ```
+
+Go To http://localhost:3000
