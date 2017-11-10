@@ -2,33 +2,19 @@ import React from "react";
 import { push } from "react-router-redux";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import {
-  increment,
-  incrementAsync,
-  decrement,
-  decrementAsync
-} from "../../modules/counter";
+import { getTwitterFeed } from "../../modules/twitter";
 
 const Home = props => (
   <div>
     <h1>Home</h1>
-    <p>Count: {props.count}</p>
+    <p>Count: {props.twitterFeed.feed}</p>
 
     <p>
-      <button onClick={props.increment} disabled={props.isIncrementing}>
-        Increment
-      </button>
-      <button onClick={props.incrementAsync} disabled={props.isIncrementing}>
-        Increment Async
-      </button>
-    </p>
-
-    <p>
-      <button onClick={props.decrement} disabled={props.isDecrementing}>
-        Decrement
-      </button>
-      <button onClick={props.decrementAsync} disabled={props.isDecrementing}>
-        Decrement Async
+      <button
+        onClick={props.getTwitterFeed}
+        disabled={props.isRequestingTwitterFeed}
+      >
+        Get Twitter Feed
       </button>
     </p>
 
@@ -41,18 +27,14 @@ const Home = props => (
 );
 
 const mapStateToProps = state => ({
-  count: state.counter.count,
-  isIncrementing: state.counter.isIncrementing,
-  isDecrementing: state.counter.isDecrementing
+  twitterFeed: state.twitter.twitterFeed,
+  isRequestingTwitterFeed: state.twitter.isRequestingTwitterFeed
 });
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      increment,
-      incrementAsync,
-      decrement,
-      decrementAsync,
+      getTwitterFeed,
       changePage: () => push("/about-us")
     },
     dispatch

@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import { routerReducer } from "react-router-redux";
-import counter from "./counter";
+import { routerReducer as router } from "react-router-redux";
+import twitter from "./twitter";
 
 export default combineReducers({
-  router: routerReducer,
-  counter
+  router,
+  twitter
 });

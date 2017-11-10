@@ -10,8 +10,8 @@ const {
 const path = require("path");
 const express = require("express");
 const Twitter = require("twitter");
-const app = express();
 const Promise = require("bluebird");
+const app = express();
 
 app.use(express.static(path.join(__dirname, "build")));
 
@@ -21,6 +21,7 @@ const twitterClient = new Twitter({
   access_token_key,
   access_token_secret
 });
+
 Promise.promisifyAll(twitterClient);
 
 app.get("/search", ({ query: { q } }, res) =>
@@ -34,4 +35,4 @@ app.get("*", (req, res) =>
   res.sendFile(path.join(__dirname, "build/index.html"))
 );
 
-app.listen(PORT, err => console.log(err || `listening on ${PORT}`));
+app.listen(3000, err => console.log(err || `listening on ${3000}`));
