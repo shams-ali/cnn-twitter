@@ -1,8 +1,7 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 
-const SearchBar = props => {
-  const { handleSubmit, pristine, reset, submitting } = props;
+const SearchBar = ({ handleSubmit, pristine, reset, submitting }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div>

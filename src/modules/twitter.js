@@ -27,12 +27,13 @@ export default (state = initialState, { type, twitterFeed }) => {
   }
 };
 
-export const getTwitterFeed = q => dispatch => {
+export const getTwitterFeed = e => dispatch => {
+  e.preventDefault();
   dispatch({
     type: GET_TWITTER_FEED_REQUESTED
   });
   return axios
-    .get(`/api/search?q=${q}`)
+    .get(`/api/search?q=${e.target.search.value}`)
     .then(({ data: twitterFeed }) =>
       dispatch({ type: SET_TWITTER_FEED, twitterFeed })
     );
