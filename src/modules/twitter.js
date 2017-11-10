@@ -3,7 +3,7 @@ export const GET_TWITTER_FEED_REQUESTED = "twitter/GET_TWITTER_FEED_REQUESTED";
 export const SET_TWITTER_FEED = "twitter/SET_TWITTER_FEED";
 
 const initialState = {
-  twitterFeed: {},
+  twitterFeed: [],
   isRequestingTwitterFeed: false
 };
 
@@ -32,7 +32,7 @@ export const getTwitterFeed = q => dispatch => {
     type: GET_TWITTER_FEED_REQUESTED
   });
   return axios
-    .get(`/api/search?q=hello`)
+    .get(`/api/search?q=${q}`)
     .then(({ data: twitterFeed }) =>
       dispatch({ type: SET_TWITTER_FEED, twitterFeed })
     );

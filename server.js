@@ -27,7 +27,7 @@ Promise.promisifyAll(twitterClient);
 app.get("/api/search", ({ query: { q } }, res) =>
   twitterClient
     .getAsync("search/tweets", { q, count: 10 })
-    .then(data => res.send(data))
+    .then(({ statuses }) => res.send(statuses))
     .catch(err => res.send(err))
 );
 
