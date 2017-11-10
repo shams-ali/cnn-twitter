@@ -1,4 +1,8 @@
 require("dotenv").config();
+const path = require("path");
+const express = require("express");
+const Twitter = require("twitter");
+const Promise = require("bluebird");
 const {
   PORT,
   consumer_key,
@@ -6,15 +10,6 @@ const {
   access_token_key,
   access_token_secret
 } = process.env;
-
-const path = require("path");
-const express = require("express");
-const Twitter = require("twitter");
-const Promise = require("bluebird");
-const app = express();
-
-app.use(express.static(path.join(__dirname, "build")));
-
 const twitterClient = new Twitter({
   consumer_key,
   consumer_secret,
@@ -23,6 +18,9 @@ const twitterClient = new Twitter({
 });
 
 Promise.promisifyAll(twitterClient);
+const app = express();
+
+app.use(express.static(path.join(__dirname, "build")));
 
 app.get("/api/search", ({ query: { q } }, res) =>
   twitterClient
