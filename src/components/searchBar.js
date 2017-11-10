@@ -1,27 +1,21 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
-
+import "../styles/search-bar.css";
 const SearchBar = ({ handleSubmit, pristine, reset, submitting }) => (
-  <form onSubmit={handleSubmit}>
-    <div className="group">
-      <div>
-        <Field
-          name="search"
-          component="input"
-          type="text"
-          placeholder="Search Twitter!!"
-        />
-      </div>
-    </div>
-    <div>
-      <button type="submit" disabled={pristine || submitting}>
-        Submit
+  <div className="sw">
+    <form onSubmit={handleSubmit}>
+      <Field
+        name="search"
+        component="input"
+        type="text"
+        placeholder="Search Twitter!!"
+        className="search"
+      />
+      <button type="submit" className="go" disabled={pristine || submitting}>
+        <span className="entypo-search" />
       </button>
-      <button type="button" disabled={pristine || submitting} onClick={reset}>
-        Clear Values
-      </button>
-    </div>
-  </form>
+    </form>
+  </div>
 );
 
 export default reduxForm({

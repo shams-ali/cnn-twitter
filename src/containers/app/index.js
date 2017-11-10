@@ -3,13 +3,30 @@ import { Route, Link } from "react-router-dom";
 import Home from "../home";
 import About from "../about";
 
-/* <header>
-<Link to="/">Home</Link>
-<Link to="/about-us">About</Link>
-</header> */
-
 const App = () => (
   <div>
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="#!">CNN</a>
+        </div>
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#!">
+              <span />
+            </a>
+          </div>
+          <ul class="nav-list">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about-us">About</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
     <header className="masthead clear">
       <div className="centered">
         <div className="site-branding">

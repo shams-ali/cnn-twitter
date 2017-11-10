@@ -2,7 +2,7 @@ import React from "react";
 
 const TweetListItem = ({ tweet, createdAt, screenName, profileImage }) => (
   <article className="card">
-    <a href="#">
+    <a href={`https://twitter.com/${screenName}`}>
       <figure className="thumbnail">
         <img src={profileImage} alt="User" />
       </figure>
