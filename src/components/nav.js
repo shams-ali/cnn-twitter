@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "sanitize.css/sanitize.css";
 import "../styles/nav.css";
 
 const Nav = () => (
