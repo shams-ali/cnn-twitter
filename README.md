@@ -29,7 +29,9 @@ CNN-Twitters got your back. CNN-Twitter will help you find the the most recent T
 - react@16
 - Redux-Thunk/Redux-Forms
 - React-Router@4
-
+- jest
+- flow
+- eslint: airbnb, prettier
 
 ## <a name="development"></a>Development
 Setting up a development environment requires global installations of `node`, `npm`, `yarn`, and `create-react-app`
@@ -42,10 +44,15 @@ On the command prompt run the following commands
 $ git clone https://github.com/shams-ali/cnn-twitter.git
 
 $ cd cnn-twitter/
+
+$ yarn install
 ```
 **Update the `.env.example` and rename it `.env`!!!!**
 ```sh
 $ yarn run start:prod
 ```
-
+Testing:
+```sh
+$ yarn test
+```
 Go To http://localhost:3000
