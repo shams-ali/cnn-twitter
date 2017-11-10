@@ -3,7 +3,7 @@ import TweetListItem from "./tweetListItem.js";
 
 const TweetList = ({ tweets }) => {
   return (
-    <section class="cards">
+    <section className="cards">
       {tweets.map(
         ({
           id,

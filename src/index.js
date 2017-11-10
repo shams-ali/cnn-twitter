@@ -4,9 +4,8 @@ import { Provider } from "react-redux";
 import { ConnectedRouter } from "react-router-redux";
 import store, { history } from "./store";
 import App from "./containers/app";
-// import "./styles/media-queries.css";
+
 import "./styles/twitter-feed.css";
-import "./styles/nav.css";
 
 const target = document.querySelector("#root");
 
