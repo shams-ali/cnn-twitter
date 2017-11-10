@@ -4,16 +4,13 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { getTwitterFeed } from "../../modules/twitter";
 
-const Home = props => (
+const Home = ({ twitterFeed, getTwitterFeed, isRequestingTwitterFeed }) => (
   <div>
     <h1>Home</h1>
-    <p>TitterFeed: {console.log(props.twitterFeed)}</p>
+    <p>TitterFeed: {console.log(twitterFeed)}</p>
 
     <p>
-      <button
-        onClick={props.getTwitterFeed}
-        disabled={props.isRequestingTwitterFeed}
-      >
+      <button onClick={getTwitterFeed} disabled={isRequestingTwitterFeed}>
         Get Twitter Feed
       </button>
     </p>
