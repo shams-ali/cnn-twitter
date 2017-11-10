@@ -7,7 +7,7 @@ import { getTwitterFeed } from "../../modules/twitter";
 const Home = props => (
   <div>
     <h1>Home</h1>
-    <p>Count: {console.log(props.twitterFeed)}</p>
+    <p>TitterFeed: {console.log(props.twitterFeed)}</p>
 
     <p>
       <button
