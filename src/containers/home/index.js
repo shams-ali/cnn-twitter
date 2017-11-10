@@ -3,11 +3,13 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { getTwitterFeed } from "../../modules/twitter";
 import TweetListItem from "../../components/tweetList";
+import SearchBar from "../../components/searchBar";
 
 const Home = ({ twitterFeed, getTwitterFeed, isRequestingTwitterFeed }) => (
   <div>
     <h1>Home</h1>
     <p>TitterFeed: {console.log(twitterFeed)}</p>
+    <SearchBar handleSubmit={getTwitterFeed} />
     <TweetListItem tweets={twitterFeed} />
     <p>
       <button onClick={getTwitterFeed} disabled={isRequestingTwitterFeed}>
