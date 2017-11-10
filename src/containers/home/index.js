@@ -17,16 +17,17 @@ const Home = ({ twitterFeed, getTwitterFeed, isRequestingTwitterFeed }) => (
   </div>
 );
 
-const mapStateToProps = state => ({
-  twitterFeed: state.twitter.twitterFeed,
-  isRequestingTwitterFeed: state.twitter.isRequestingTwitterFeed
+const mapStateToProps = ({
+  twitter: { twitterFeed, isRequestingTwitterFeed }
+}) => ({
+  twitterFeed,
+  isRequestingTwitterFeed
 });
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      getTwitterFeed,
-      changePage: () => push("/about-us")
+      getTwitterFeed
     },
     dispatch
   );
