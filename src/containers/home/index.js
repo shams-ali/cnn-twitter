@@ -9,13 +9,11 @@ const Home = ({ twitterFeed, getTwitterFeed, isRequestingTwitterFeed }) => (
   <div>
     <h1>Home</h1>
     <p>TitterFeed: {console.log(twitterFeed)}</p>
-    <SearchBar handleSubmit={getTwitterFeed} />
+    <SearchBar
+      handleSubmit={getTwitterFeed}
+      submitting={isRequestingTwitterFeed}
+    />
     <TweetListItem tweets={twitterFeed} />
-    <p>
-      <button onClick={getTwitterFeed} disabled={isRequestingTwitterFeed}>
-        Get Twitter Feed
-      </button>
-    </p>
   </div>
 );
 

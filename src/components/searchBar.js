@@ -28,5 +28,5 @@ const SearchBar = ({ handleSubmit, pristine, reset, submitting }) => {
 };
 
 export default reduxForm({
-  form: "simple" // a unique identifier for this form
+  form: "searchBar"
 })(SearchBar);
